@@ -10,7 +10,7 @@
 			#address-cells = <1>;
 			#size-cells = <0>;
 			status = "okay";
-                        clock-frequency = <400000>;
+			clock-frequency = <400000>;
 
 			mlx90640: mlx90640@33 {
 				compatible = "melexis,mlx90640";
