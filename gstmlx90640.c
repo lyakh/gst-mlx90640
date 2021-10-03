@@ -342,7 +342,7 @@ static GstFlowReturn gst_mlx90640_transform(GstVideoFilter *filter, GstVideoFram
 	float ta = MLX90640_GetTa(in_pix, &mlx90640_param);
 	float tpxl[32 * 24];
 
-	MLX90640_CalculateTo(in_pix, &mlx90640_param, 1., ta, tpxl);
+	MLX90640_CalculateTo(in_pix, &mlx90640_param, 0.95, ta - 8., tpxl);
 	float tmin = 20., tmax = 30., range;
 
 	for (i = 0; i < 32 * 24; i++)
